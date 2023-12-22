@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{
+            width: 80px;
+            height: 50px;
+        }
+        .account{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            background-color: silver;
+
+        }
+        .navigation__link{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            
+    
+        }
+        .navigation{
+            display: flex;
+            gap: 50px;
+        }
+        .navigation__link:hover{
+            text-decoration: underline;
+        }
+        @media screen and (max-width: 450px){
+            .account{
+                display: none;
+            
+            }
+            .navigation__link{
+                    border: 1px solid rgb(192, 192, 192);
+                    padding: 5px 10px;
+                    animation-name: linknav;
+                    animation-duration: 2s;
+                }
+                .navigation__link:hover{
+                    animation-name: linkhover;
+                    animation-duration: 2s;
+                    text-decoration: none;
+                    background-color: rgba(250, 186, 196, 0.792);
+                }
+                @keyframes linkhover {
+                    0%{
+                    background-color: aliceblue;
+                    }
+                    100%{
+                        background-color: rgba(250, 186, 196, 0.792)  
+                    }
+                }
+                @keyframes linknav {
+                    0%{
+                        background-color: rgba(250, 186, 196, 0.792);
+                    }
+                    100%{
+                        background-color: white;
+                    }
+                    
+                }
+                .navigation{
+                    gap: 0;
+                }
+@media screen and (max-width: 800px) {
+    .header{
+        flex-direction: column;
+        align-items: start;
+    }
+    .navigation__link{
+        border: 0;
+        border-bottom: 1px solid silver;
+        text-transform: uppercase;
+    }
+}
+.navigation{
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+}
+        }
+
+    </style>
+</head>
+<body>
+   <div class="header">
+    <img src="https://w7.pngwing.com/pngs/755/534/png-transparent-apple-logo-apple-heart-logo-monochrome.png" alt="" class="logo">
+    <nav class="navigation">
+        <a href="" class="navigation__link">Главная</a>
+        <a href="" class="navigation__link">Продукты</a>
+        <a href="" class="navigation__link">Новости</a>
+        <a href="" class="navigation__link">О нас</a>
+        <a href="" class="navigation__link">Партнеры</a>
+    </nav>
+    <span class="account"></span>
+   </div> 
+</body>
+</html>
